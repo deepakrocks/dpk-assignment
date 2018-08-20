@@ -1,9 +1,27 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import App from './Components/App';
+import { AppContainer } from 'react-hot-loader';
+import { render } from 'react-dom';
+
 import './index.scss';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+render(
+  <AppContainer>
+    <App/>
+  </AppContainer>,
+  document.getElementById('root'),
 );
+
+declare var module: any;
+
+if (module.hot) {
+  module.hot.accept('./component/App', () => {
+    const App = require('./components/App').default;  // tslint:disable-line
+    render(
+      <AppContainer>
+        <App/>
+      </AppContainer>,
+      document.getElementById('app'),
+    );
+  });
+}
