@@ -5,7 +5,7 @@ class Header extends React.Component<{}, {}> {
   render() {
 
     return (
-      <h2> Appointment Scheduler</h2>
+      <h2 style={{ color: '#216099'}}> Appointment Scheduler</h2>
     );
   }
 }

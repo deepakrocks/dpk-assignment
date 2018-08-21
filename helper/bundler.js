@@ -17,6 +17,6 @@ app.use(
 );
 
 app.use(bundler.middleware());
-const port = Number(1234);
+const port = Number(3000);
 console.log(`App is starting up on port ${port}`);
 app.listen(port, () => console.log(`Parcel bundled app listening on port ${port}`));
