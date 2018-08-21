@@ -6,7 +6,7 @@ export interface BodyActions {
   type: string;
   timeSlots: AppointmentDetails[];
   showContactDetails: boolean;
-
+  selectedAppointment: AppointmentDetails;
 }
 
 export interface AppointmentDetails
@@ -20,6 +20,7 @@ export interface AppointmentDetails
 export const SET_TIME = 'SET_NAME';
 export const SET_AVAILABLE_STATUS = 'SET_AVAILABLE_STATUS';
 export const SET_SHOW_CONTACT_DETAILS = 'SET_SHOW_CONTACT_DETAILS';
+export const SET_SELECTED_APPOINTMENT = 'SET_SELECTED_APPOINTMENT';
 
 // export interface AppointmentTimeState {
 //   type: string;
@@ -39,10 +40,16 @@ export function setAvailableStatus(availableStatus: boolean) {
     type: SET_AVAILABLE_STATUS,
   };
 }
-export function setShowContactDetails(availableStatus: boolean) {
+export function setShowContactDetails(showContactDetails: boolean) {
   return {
-    availableStatus,
+    showContactDetails,
     type: SET_SHOW_CONTACT_DETAILS,
+  };
+};
+export function setSelectedAppointment(selectedAppointment: AppointmentDetails) {
+  return {
+    selectedAppointment,
+    type: SET_SELECTED_APPOINTMENT,
   };
 };
 

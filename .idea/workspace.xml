@@ -2,27 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20cff0b2-81e1-42c7-aeb3-0b76770cf103" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/Components/AppointmentHome.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/Components/AptmntTime.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/Services/TimeSlotService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/actions/Actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/actions/AppointmentTimeActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/actions/BodyActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/containers/AppointmentContainers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/containers/BodyContainers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/containers/HeaderContainer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/reducers/AptmntTimeReducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/reducers/Reducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/reducers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/store/ConfigureStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1327f0bb389d68fdb36beb83eea3d8f2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1327f0bb389d68fdb36beb83eea3d8f2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3140c1e514d72334deb4b2b2d097c648.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3140c1e514d72334deb4b2b2d097c648.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3be4dcc4a1bc918e043f9cb7f4775489.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3be4dcc4a1bc918e043f9cb7f4775489.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/3fb5a0679f23e80ec723b7126fba1e06.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/3fb5a0679f23e80ec723b7126fba1e06.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/88367549c9fd80d559ed40c636cc2d84.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/88367549c9fd80d559ed40c636cc2d84.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ed713a0ad72c5dd66ecde86738b2eec4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ed713a0ad72c5dd66ecde86738b2eec4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ee05e08b4ecb9c4041ae93374c0fd5dd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f25c9a9f2cc8908e3dfb6e2014936b20.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f25c9a9f2cc8908e3dfb6e2014936b20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f466e16107bc1eb0f165860965e1e2d5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f466e16107bc1eb0f165860965e1e2d5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/fc4474c9163dd540a34f488963388ad8.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/Components/AppointmentTime.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client.baf2588c.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client.baf2588c.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client.baf2588c.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client.baf2588c.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/Components/AptmntTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/Components/AptmntTime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/Components/AptmntTime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/Components/AptmntTime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/Components/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/Components/Container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/Components/Container.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/Components/Container.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/actions/AppointmentTimeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/actions/AppointmentTimeActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/actions/AppointmentTimeActions.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/actions/AppointmentTimeActions.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/actions/BodyActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/actions/BodyActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/actions/BodyActions.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/actions/BodyActions.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/containers/AppointmentContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/containers/AppointmentContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/containers/AppointmentContainers.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/containers/AppointmentContainers.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/containers/AppointmentTimeContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/containers/AppointmentTimeContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/containers/AppointmentTimeContainers.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/containers/AppointmentTimeContainers.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/containers/BodyContainers.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/containers/BodyContainers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/containers/BodyContainers.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/containers/BodyContainers.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/reducers/Reducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/reducers/Reducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/client/reducers/Reducers.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/client/reducers/Reducers.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Components/AptmntTime.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Components/AptmntTime.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/Components/ContactDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Components/ContactDetails.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Components/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Components/Container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/actions/BodyActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/actions/BodyActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/containers/BodyContainers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/containers/BodyContainers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/reducers/Reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/reducers/Reducers.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +66,8 @@
           <entry key="js" value="33" />
           <entry key="json" value="83" />
           <entry key="scss" value="59" />
-          <entry key="ts" value="1261" />
-          <entry key="tsx" value="3511" />
+          <entry key="ts" value="1514" />
+          <entry key="tsx" value="3809" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -63,8 +78,8 @@
           <entry key="JavaScript" value="33" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="59" />
-          <entry key="TypeScript" value="1261" />
-          <entry key="TypeScript JSX" value="3511" />
+          <entry key="TypeScript" value="1514" />
+          <entry key="TypeScript JSX" value="3809" />
           <entry key="tsconfig" value="16" />
         </counts>
       </usages-collector>
@@ -74,25 +89,25 @@
           <entry key="gitignore" value="1" />
           <entry key="html" value="3" />
           <entry key="js" value="3" />
-          <entry key="json" value="4" />
+          <entry key="json" value="5" />
           <entry key="md" value="1" />
           <entry key="scss" value="2" />
           <entry key="svg" value="1" />
-          <entry key="ts" value="35" />
-          <entry key="tsx" value="24" />
+          <entry key="ts" value="38" />
+          <entry key="tsx" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
           <entry key="HTML" value="3" />
-          <entry key="JSON" value="3" />
+          <entry key="JSON" value="4" />
           <entry key="JavaScript" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="2" />
           <entry key="SVG" value="1" />
-          <entry key="TypeScript" value="35" />
-          <entry key="TypeScript JSX" value="24" />
+          <entry key="TypeScript" value="38" />
+          <entry key="TypeScript JSX" value="27" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
@@ -105,23 +120,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/client/Components/AptmntTime.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/Components/AppointmentHome.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
               <folding>
                 <element signature="e#39#95#0" expanded="true" />
               </folding>
@@ -130,10 +133,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/containers/BodyContainers.ts">
+        <entry file="file://$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+            <state relative-caret-position="345">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/Components/AptmntTime.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/Components/ContactDetails.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/containers/AppointmentContainers.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -144,29 +183,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/Components/Container.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="30" selection-start-line="28" selection-end-line="29" />
+            <state relative-caret-position="316">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
                 <element signature="e#79#131#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/actions/BodyActions.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="34" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/reducers/Reducers.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -187,8 +208,9 @@
       <find>history</find>
       <find>fetchMockData</find>
       <find>timeSlots</find>
-      <find>SET_SHOW_CONTACT_DETAILS</find>
       <find>showAppointmentDetails</find>
+      <find>selectedAppointment</find>
+      <find>SET_SHOW_CONTACT_DETAILS</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/client/Components/appointmentTime.tsx" />
         <option value="$PROJECT_DIR$/src/client/Components/Header.tsx" />
         <option value="$PROJECT_DIR$/src/client/Components/SharedElements.ts" />
-        <option value="$PROJECT_DIR$/src/client/Components/ContactDetails.tsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/client/index.tsx" />
         <option value="$PROJECT_DIR$/src/client/containers/ProfileContainers.ts" />
@@ -224,15 +245,16 @@
         <option value="$PROJECT_DIR$/src/client/Services/TimeSlotService.ts" />
         <option value="$PROJECT_DIR$/src/client/Components/AppointmentTime.tsx" />
         <option value="$PROJECT_DIR$/src/client/actions/AppointmentTimeActions.ts" />
-        <option value="$PROJECT_DIR$/src/client/actions/BodyActions.ts" />
         <option value="$PROJECT_DIR$/src/client/containers/AppointmentContainers.ts" />
         <option value="$PROJECT_DIR$/src/client/reducers/AptmntTimeReducers.ts" />
         <option value="$PROJECT_DIR$/src/client/reducers/index.ts" />
         <option value="$PROJECT_DIR$/src/client/Components/Container.tsx" />
-        <option value="$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts" />
-        <option value="$PROJECT_DIR$/src/client/reducers/Reducers.ts" />
+        <option value="$PROJECT_DIR$/src/client/actions/BodyActions.ts" />
         <option value="$PROJECT_DIR$/src/client/containers/BodyContainers.ts" />
+        <option value="$PROJECT_DIR$/src/client/reducers/Reducers.ts" />
         <option value="$PROJECT_DIR$/src/client/Components/AptmntTime.tsx" />
+        <option value="$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts" />
+        <option value="$PROJECT_DIR$/src/client/Components/ContactDetails.tsx" />
       </list>
     </option>
   </component>
@@ -387,12 +409,12 @@
       <workItem from="1534468565975" duration="204000" />
       <workItem from="1534469393330" duration="1411000" />
       <workItem from="1534470931626" duration="1073000" />
-      <workItem from="1534474347499" duration="42358000" />
+      <workItem from="1534474347499" duration="47224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45046000" />
+    <option name="totallyTimeSpent" value="49912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="42" width="1418" height="947" extended-state="0" />
@@ -542,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Components/ContactDetails.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -576,13 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -620,16 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/containers/AppointmentContainers.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/actions/AppointmentTimeActions.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -654,10 +649,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="120">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/containers/BodyContainers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="26" selection-start-line="23" selection-end-line="24" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -666,52 +668,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/actions/BodyActions.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="34" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Components/Container.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="30" selection-start-line="28" selection-end-line="29" />
-          <folding>
-            <element signature="e#79#131#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="259">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/reducers/Reducers.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        <state relative-caret-position="360">
+          <caret line="55" column="27" lean-forward="true" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Components/AppointmentHome.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="e#39#95#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/containers/BodyContainers.ts">
+    <entry file="file://$PROJECT_DIR$/src/client/containers/AppointmentContainers.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        <state relative-caret-position="210">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Components/Container.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#79#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Components/AptmntTime.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state relative-caret-position="465">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/containers/AppointmentTimeContainers.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/Components/ContactDetails.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>

@@ -22,13 +22,26 @@ var modalStyles = {
 };
 var AppointmentDiv = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject([""], [""])));
 var AppointmentTime = function (appointmentTimeSlotProps) {
-    var time = appointmentTimeSlotProps.time, availableStatus = appointmentTimeSlotProps.availableStatus, showContactDetails = appointmentTimeSlotProps.showContactDetails, showAppointmentDetails = appointmentTimeSlotProps.showAppointmentDetails, handleModalClick = appointmentTimeSlotProps.handleModalClick;
+    var timeSlots = appointmentTimeSlotProps.timeSlots, showContactDetails = appointmentTimeSlotProps.showContactDetails, showAppointmentDetails = appointmentTimeSlotProps.showAppointmentDetails, handleModalClick = appointmentTimeSlotProps.handleModalClick, selectedAppointment = appointmentTimeSlotProps.selectedAppointment, setSelectedAppointment = appointmentTimeSlotProps.setSelectedAppointment;
+    console.log('timeSlots', timeSlots);
+    console.log('showContactDetails', showContactDetails);
+    console.log('showAppointmentDetails', appointmentTimeSlotProps);
+    // @ts-ignore
+    console.log('handleModalClick', appointmentTimeSlotProps);
     return (React.createElement(AppointmentDiv, null,
-        React.createElement(SharedElements_1.StyledButton, { style: availableStatus ? { background: '#00FF00' } : { background: '#FF0000' }, onClick: showAppointmentDetails },
-            time.appointmentTime,
-            " "),
+        timeSlots.map(function (timeSlot, index) { return React.createElement(React.Fragment, { key: index },
+            React.createElement(SharedElements_1.StyledButton, { style: timeSlot.available ? { background: '#00FF00' } : { background: '#FF0000' }, onClick: function () {
+                    console.log('onClicked');
+                    setSelectedAppointment(timeSlot);
+                    showAppointmentDetails();
+                } },
+                timeSlot.timeSlot,
+                " ")); }),
         React.createElement(react_modal_1.default, { isOpen: showContactDetails, contentLabel: "Minimal Modal Example", ariaHideApp: false, style: modalStyles },
-            React.createElement(ContactDetails_1.default, { appointmentTime: time.appointmentTime, modalClosed: handleModalClick }))));
+            React.createElement(ContactDetails_1.default, { appointmentTime: selectedAppointment !== undefined ? selectedAppointment.timeSlot : '', modalClosed: function () {
+                    console.log('handle Click');
+                    handleModalClick();
+                } }))));
 };
 exports.default = AppointmentTime;
 var templateObject_1;

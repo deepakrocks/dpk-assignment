@@ -18,7 +18,7 @@ interface Props {
 
 const Container = (props: Props) => {
 
-  // const {timeSlots, } = props;
+  console.log('props', props);
     return (
 
       <ContainerDiv>

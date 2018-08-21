@@ -17531,6 +17531,7 @@ var ContactDetails = /** @class */function (_super) {
         return _this;
     }
     ContactDetails.prototype.render = function () {
+        console.log('props COntact Details', this.props);
         var appointmentTime = this.props.appointmentTime;
         var _a = this.state,
             name = _a.name,
@@ -36482,7 +36483,6 @@ var __importStar = this && this.__importStar || function (mod) {
 var __importDefault = this && this.__importDefault || function (mod) {
     return mod && mod.__esModule ? mod : { "default": mod };
 };
-var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
 var styled_components_1 = __importDefault(require("styled-components"));
@@ -36505,23 +36505,72 @@ var AppointmentTime = function AppointmentTime(appointmentTimeSlotProps) {
     var timeSlots = appointmentTimeSlotProps.timeSlots,
         showContactDetails = appointmentTimeSlotProps.showContactDetails,
         showAppointmentDetails = appointmentTimeSlotProps.showAppointmentDetails,
-        handleModalClick = appointmentTimeSlotProps.handleModalClick;
-    console.log('timeSlots', timeSlots);
-    console.log('showContactDetails', showContactDetails);
-    console.log('showAppointmentDetails', appointmentTimeSlotProps);
+        handleModalClick = appointmentTimeSlotProps.handleModalClick,
+        selectedAppointment = appointmentTimeSlotProps.selectedAppointment,
+        setSelectedAppointment = appointmentTimeSlotProps.setSelectedAppointment;
+    // console.log('timeSlots', timeSlots);
+    // console.log('showContactDetails', showContactDetails);
+    console.log('selectedAppointment', selectedAppointment);
     // @ts-ignore
-    console.log('handleModalClick', _this);
+    console.log('handleModalClick', appointmentTimeSlotProps);
     return React.createElement(AppointmentDiv, null, timeSlots.map(function (timeSlot, index) {
         return React.createElement(React.Fragment, { key: index }, React.createElement(SharedElements_1.StyledButton, { style: timeSlot.available ? { background: '#00FF00' } : { background: '#FF0000' }, onClick: function onClick() {
-                return showAppointmentDetails();
-            } }, timeSlot.timeSlot, " "), React.createElement(react_modal_1.default, { isOpen: showContactDetails, contentLabel: "Minimal Modal Example", ariaHideApp: false, style: modalStyles }, React.createElement(ContactDetails_1.default, { appointmentTime: timeSlot.timeSlot, modalClosed: function modalClosed() {
-                return handleModalClick();
-            } })));
-    }));
+                console.log('onClicked');
+                setSelectedAppointment(timeSlot);
+                showAppointmentDetails();
+            } }, timeSlot.timeSlot, " "));
+    }), React.createElement(react_modal_1.default, { isOpen: showContactDetails, contentLabel: "Minimal Modal Example", ariaHideApp: false, style: modalStyles }, React.createElement(ContactDetails_1.default, { appointmentTime: selectedAppointment !== null ? selectedAppointment.timeSlot : '', modalClosed: function modalClosed(status) {
+            console.log('handle Click, status', status ? 'YES' : 'NO');
+            handleModalClick();
+        } })));
 };
 exports.default = AppointmentTime;
 var templateObject_1;
-},{"react":"../../node_modules/react/index.js","styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","./ContactDetails":"Components/ContactDetails.tsx","./SharedElements":"Components/SharedElements.ts","react-modal":"../../node_modules/react-modal/lib/index.js"}],"containers/AppointmentTimeContainers.ts":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","./ContactDetails":"Components/ContactDetails.tsx","./SharedElements":"Components/SharedElements.ts","react-modal":"../../node_modules/react-modal/lib/index.js"}],"actions/BodyActions.ts":[function(require,module,exports) {
+"use strict";
+// import { fetchTimeSlot } from '../services/TimeSlotService';
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SET_TIME_SLOTS = 'SET_TIME_SLOTS';
+exports.SET_TIME = 'SET_NAME';
+exports.SET_AVAILABLE_STATUS = 'SET_AVAILABLE_STATUS';
+exports.SET_SHOW_CONTACT_DETAILS = 'SET_SHOW_CONTACT_DETAILS';
+exports.SET_SELECTED_APPOINTMENT = 'SET_SELECTED_APPOINTMENT';
+// export interface AppointmentTimeState {
+//   type: string;
+//   time: any;
+// }
+function setTime(time) {
+    return {
+        time: time,
+        type: exports.SET_TIME
+    };
+}
+exports.setTime = setTime;
+function setAvailableStatus(availableStatus) {
+    return {
+        availableStatus: availableStatus,
+        type: exports.SET_AVAILABLE_STATUS
+    };
+}
+exports.setAvailableStatus = setAvailableStatus;
+function setShowContactDetails(showContactDetails) {
+    return {
+        showContactDetails: showContactDetails,
+        type: exports.SET_SHOW_CONTACT_DETAILS
+    };
+}
+exports.setShowContactDetails = setShowContactDetails;
+;
+function setSelectedAppointment(selectedAppointment) {
+    return {
+        selectedAppointment: selectedAppointment,
+        type: exports.SET_SELECTED_APPOINTMENT
+    };
+}
+exports.setSelectedAppointment = setSelectedAppointment;
+;
+},{}],"containers/AppointmentTimeContainers.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -36530,18 +36579,30 @@ var __importDefault = this && this.__importDefault || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_redux_1 = require("react-redux");
 var AptmntTime_1 = __importDefault(require("../Components/AptmntTime"));
+var BodyActions_1 = require("../actions/BodyActions");
 // import { setShowContactDetails} from '../actions/AppointmentTimeActions';
 var mapStateToProps = function mapStateToProps(state) {
     return {
         timeSlots: state.timeSlots,
-        showContactDetails: state.showContactDetails
+        showContactDetails: state.showContactDetails,
+        selectedAppointment: state.selectedAppointment
     };
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-    return {};
+    return {
+        showAppointmentDetails: function showAppointmentDetails() {
+            return dispatch(BodyActions_1.setShowContactDetails(true));
+        },
+        handleModalClick: function handleModalClick() {
+            return dispatch(BodyActions_1.setShowContactDetails(false));
+        },
+        setSelectedAppointment: function setSelectedAppointment(appointment) {
+            return dispatch(BodyActions_1.setSelectedAppointment(appointment));
+        }
+    };
 };
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(AptmntTime_1.default);
-},{"react-redux":"../../node_modules/react-redux/es/index.js","../Components/AptmntTime":"Components/AptmntTime.tsx"}],"Components/Container.tsx":[function(require,module,exports) {
+},{"react-redux":"../../node_modules/react-redux/es/index.js","../Components/AptmntTime":"Components/AptmntTime.tsx","../actions/BodyActions":"actions/BodyActions.ts"}],"Components/Container.tsx":[function(require,module,exports) {
 "use strict";
 
 var __makeTemplateObject = this && this.__makeTemplateObject || function (cooked, raw) {
@@ -36573,48 +36634,13 @@ var styled_components_1 = __importDefault(require("styled-components"));
 var AppointmentTimeContainers_1 = __importDefault(require("../containers/AppointmentTimeContainers"));
 var ContainerDiv = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  height : 100%;\n  margin: 20px;\n  background : #777777;\n"], ["\n  height : 100%;\n  margin: 20px;\n  background : #777777;\n"])));
 var Container = function Container(props) {
-    // const {timeSlots, } = props;
+    console.log('props', props);
     return React.createElement(ContainerDiv, null, React.createElement(SharedElements_1.FlexColumn, null, React.createElement("div", { style: { float: 'left', margin: '20px' } }, " Available slots"), React.createElement(SharedElements_1.FlexRow, null, React.createElement(AppointmentTimeContainers_1.default, null))));
     // }
 };
 exports.default = Container;
 var templateObject_1;
-},{"react":"../../node_modules/react/index.js","./SharedElements":"Components/SharedElements.ts","styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","../containers/AppointmentTimeContainers":"containers/AppointmentTimeContainers.ts"}],"actions/BodyActions.ts":[function(require,module,exports) {
-"use strict";
-// import { fetchTimeSlot } from '../services/TimeSlotService';
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SET_TIME_SLOTS = 'SET_TIME_SLOTS';
-exports.SET_TIME = 'SET_NAME';
-exports.SET_AVAILABLE_STATUS = 'SET_AVAILABLE_STATUS';
-exports.SET_SHOW_CONTACT_DETAILS = 'SET_SHOW_CONTACT_DETAILS';
-// export interface AppointmentTimeState {
-//   type: string;
-//   time: any;
-// }
-function setTime(time) {
-    return {
-        time: time,
-        type: exports.SET_TIME
-    };
-}
-exports.setTime = setTime;
-function setAvailableStatus(availableStatus) {
-    return {
-        availableStatus: availableStatus,
-        type: exports.SET_AVAILABLE_STATUS
-    };
-}
-exports.setAvailableStatus = setAvailableStatus;
-function setShowContactDetails(availableStatus) {
-    return {
-        availableStatus: availableStatus,
-        type: exports.SET_SHOW_CONTACT_DETAILS
-    };
-}
-exports.setShowContactDetails = setShowContactDetails;
-;
-},{}],"containers/BodyContainers.ts":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","./SharedElements":"Components/SharedElements.ts","styled-components":"../../node_modules/styled-components/dist/styled-components.browser.esm.js","../containers/AppointmentTimeContainers":"containers/AppointmentTimeContainers.ts"}],"containers/BodyContainers.ts":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -36629,7 +36655,8 @@ var BodyActions_1 = require("../actions/BodyActions");
 var mapStateToProps = function mapStateToProps(state, ownProps) {
     return {
         timeSlots: state.timeSlots,
-        showContactDetails: false
+        showContactDetails: false,
+        selectedAppointment: null
     };
 };
 var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
@@ -36643,10 +36670,16 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
                 return dispatch(BodyActions_1.setShowContactDetails(true));
             },
             handleModalClick: function handleModalClick() {
-                return dispatch(BodyActions_1.setShowContactDetails(true));
+                return dispatch(BodyActions_1.setShowContactDetails(false));
+            },
+            setSelectedAppointment: function setSelectedAppointment(appointment) {
+                return dispatch(BodyActions_1.setSelectedAppointment(appointment));
             }
-        }
-    };
+            // return{
+            //   showAppointmentDetails: () => dispatch(setShowContactDetails(true)),
+            //   handleModalClick: () => dispatch(setShowContactDetails(true)),
+            // },
+        } };
 };
 exports.default = react_redux_1.connect(mapStateToProps, mapDispatchToProps)(Container_1.default);
 },{"react-redux":"../../node_modules/react-redux/es/index.js","../Components/Container":"Components/Container.tsx","../actions/BodyActions":"actions/BodyActions.ts"}],"Components/Header.tsx":[function(require,module,exports) {
@@ -36819,7 +36852,8 @@ var initialState = {
         name: '',
         available: true,
         phNumber: '' }],
-    showContactDetails: false
+    showContactDetails: false,
+    selectedAppointment: null
 };
 function sampleReducer(state, action) {
     if (state === void 0) {
@@ -36830,6 +36864,8 @@ function sampleReducer(state, action) {
             return Object.assign({}, state, { timeSlots: action.timeSlots });
         case BodyActions_1.SET_SHOW_CONTACT_DETAILS:
             return Object.assign({}, state, { showContactDetails: action.showContactDetails });
+        case BodyActions_1.SET_SELECTED_APPOINTMENT:
+            return Object.assign({}, state, { selectedAppointment: action.selectedAppointment });
         case BodyActions_1.SET_AVAILABLE_STATUS:
             return Object.assign({}, state, {
                 showContactDetails: true
@@ -37482,7 +37518,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52016' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '58803' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 

@@ -18,28 +18,39 @@ const modalStyles = {
 const AppointmentDiv = styled.div``;
 
 const AppointmentTime = (appointmentTimeSlotProps : any )  => {
-  const { timeSlots,  showContactDetails, showAppointmentDetails, handleModalClick } = appointmentTimeSlotProps;
-  console.log('timeSlots', timeSlots);
-  console.log('showContactDetails', showContactDetails);
-  console.log('showAppointmentDetails', appointmentTimeSlotProps);
+  const { timeSlots,  showContactDetails, showAppointmentDetails, handleModalClick,
+    selectedAppointment, setSelectedAppointment } = appointmentTimeSlotProps;
+  // console.log('timeSlots', timeSlots);
+  // console.log('showContactDetails', showContactDetails);
+  console.log('selectedAppointment', selectedAppointment);
   // @ts-ignore
-  console.log('handleModalClick', this);
+  console.log('handleModalClick', appointmentTimeSlotProps);
     return (
 
       <AppointmentDiv>
         {timeSlots.map((timeSlot: any, index: number) =>  <React.Fragment key = {index}>
           <StyledButton style = {timeSlot.available ? {background:'#00FF00'} : {background : '#FF0000' }}
-                        onClick = {() => showAppointmentDetails()}>
+                        onClick = {() => {
+                          console.log('onClicked');
+                          setSelectedAppointment(timeSlot);
+                          showAppointmentDetails();
+                        }}>
             {timeSlot.timeSlot} </StyledButton>
-          <Modal
-            isOpen={showContactDetails}
-            contentLabel="Minimal Modal Example"
-            ariaHideApp={false}
-            style={modalStyles}
-          >
-            <ContactDetails appointmentTime={timeSlot.timeSlot} modalClosed={() => handleModalClick()}/>
-          </Modal>
+
         </React.Fragment>)}
+
+        <Modal
+          isOpen={showContactDetails}
+          contentLabel="Minimal Modal Example"
+          ariaHideApp={false}
+          style={modalStyles}
+        >
+          <ContactDetails appointmentTime={selectedAppointment!== null ? selectedAppointment.timeSlot : ''} modalClosed={(status: boolean) => {
+
+            console.log('handle Click, status', status ? 'YES': 'NO');
+            handleModalClick();
+          }}/>
+        </Modal>
 
       </AppointmentDiv>
     );

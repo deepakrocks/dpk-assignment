@@ -88,9 +88,9 @@ class ContactDetails extends React.Component<Props, State> {
 
   disableCheck =  () => {
     return this.state.name.length === 0 || this.state.phoneNumber.length < 10
-  }
+  };
   render() {
-
+    console.log('props COntact Details', this.props);
     const { appointmentTime } = this.props;
     const { name, phoneNumber } = this.state;
     return (

@@ -1,4 +1,4 @@
-import {BodyActions, SET_TIME_SLOTS, SET_AVAILABLE_STATUS, SET_SHOW_CONTACT_DETAILS} from '../actions/BodyActions';
+import {BodyActions, SET_TIME_SLOTS, SET_AVAILABLE_STATUS, SET_SHOW_CONTACT_DETAILS, SET_SELECTED_APPOINTMENT} from '../actions/BodyActions';
 
 const initialState = {
   timeSlots: [
@@ -40,6 +40,7 @@ const initialState = {
       phNumber: '', },
   ],
   showContactDetails: false,
+  selectedAppointment : null,
 
 };
 
@@ -49,6 +50,8 @@ function sampleReducer(state: any = initialState, action: BodyActions) {
       return Object.assign({}, state, { timeSlots: action.timeSlots });
     case SET_SHOW_CONTACT_DETAILS:
       return Object.assign({}, state, { showContactDetails: action.showContactDetails });
+    case SET_SELECTED_APPOINTMENT:
+      return Object.assign({}, state, { selectedAppointment: action.selectedAppointment });
     case SET_AVAILABLE_STATUS:
       return Object.assign({}, state, {
             showContactDetails: true,
