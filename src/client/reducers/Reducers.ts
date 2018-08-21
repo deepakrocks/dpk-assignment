@@ -1,9 +1,10 @@
-import {BodyActions, SET_TIME_SLOTS, SET_AVAILABLE_STATUS, SET_SHOW_CONTACT_DETAILS, SET_SELECTED_APPOINTMENT} from '../actions/BodyActions';
+import {BodyActions, SET_TIME_SLOTS, SET_AVAILABLE_STATUS, SET_SHOW_CONTACT_DETAILS,
+  SET_SELECTED_APPOINTMENT,SAVE_MODAL, SAVE_APPOINTMENT, SAVE_VALIDATION_ERROR} from '../actions/BodyActions';
 
 const initialState = {
   timeSlots: [
     { timeSlot : '9 am ',
-      name : '',
+      name : 'Deepak',
       available: true,
       phNumber: '', },
     { timeSlot : '10 am ',
@@ -41,6 +42,9 @@ const initialState = {
   ],
   showContactDetails: false,
   selectedAppointment : null,
+  userName: '',
+  phoneNumber : '',
+  validationError: ''
 
 };
 
@@ -52,6 +56,12 @@ function sampleReducer(state: any = initialState, action: BodyActions) {
       return Object.assign({}, state, { showContactDetails: action.showContactDetails });
     case SET_SELECTED_APPOINTMENT:
       return Object.assign({}, state, { selectedAppointment: action.selectedAppointment });
+    case SAVE_MODAL:
+      return Object.assign({}, state, { timeSlots: action.timeSlots });
+    case SAVE_APPOINTMENT:
+      return Object.assign({}, state, { selectedAppointment: action.selectedAppointment });
+    case SAVE_VALIDATION_ERROR:
+      return Object.assign({}, state, { validationError: action.validationError });
     case SET_AVAILABLE_STATUS:
       return Object.assign({}, state, {
             showContactDetails: true,
