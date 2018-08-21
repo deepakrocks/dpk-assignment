@@ -2,8 +2,6 @@ import * as React from 'react';
 import { default as styled } from 'styled-components';
 import {StyledButton, FlexRow} from './SharedElements';
 import {AppointmentDetails} from "../actions/BodyActions";
-// import {fetchTimeSlot} from "../Services/TimeSlotService";
-// import {element} from "prop-types";
 
 const StyledInput = styled.input`
   margin: 1rem 1rem;
@@ -93,8 +91,6 @@ const ContactDetails = (contactDetailsProp : any )  => {
           onChange={(event) => {
             let phoneNo = event.target.value;
             if (!validationCheck(phoneNo,/^[0-9]*$/)) {
-              // phoneNo = phoneNo.replace(/[^\d.]/gi, '');
-              console.log('erroed name value',phoneNo);
               saveValidationError(numberError)
            }else {
               if(validationError.length > 0) {

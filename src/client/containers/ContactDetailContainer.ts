@@ -7,7 +7,6 @@ import {
   saveSeletedAppointment, saveValidationError,
   setShowContactDetails
 } from "../actions/BodyActions";
-// import { setShowContactDetails} from '../actions/AppointmentTimeActions';
 
 
 const mapStateToProps = (state : any,) => (

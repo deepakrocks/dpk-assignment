@@ -19,26 +19,29 @@ const modalStyles = {
 const AppointmentDiv = styled.div``;
 
 const AppointmentTime = (appointmentTimeSlotProps : any )  => {
-  const { timeSlots,  showContactDetails, showAppointmentDetails, // handleModalClick,
-    selectedAppointment, setSelectedAppointment } = appointmentTimeSlotProps;
-  // console.log('timeSlots', timeSlots);
-  // console.log('showContactDetails', showContactDetails);
-  console.log('selectedAppointment', selectedAppointment);
+  const { timeSlots,
+    showContactDetails,
+    showAppointmentDetails,
+    setSelectedAppointment } = appointmentTimeSlotProps;
   // @ts-ignore
   console.log('handleModalClick', appointmentTimeSlotProps);
     return (
 
       <AppointmentDiv>
-        {timeSlots.map((timeSlot: any, index: number) =>  <React.Fragment key = {index}>
-          <StyledButton style = {timeSlot.available ? {background:'#00FF00'} : {background : '#FF0000' }}
+        {
+          timeSlots.map(
+            (timeSlot: any, index: number) =>
+          <React.Fragment key = {index}>
+          <StyledButton style = {timeSlot.available ? {background:'#0a4a0a'} : {background : '#FF0000' }}
                         onClick = {() => {
-                          console.log('onClicked');
                           setSelectedAppointment(timeSlot);
                           showAppointmentDetails();
                         }}>
             {timeSlot.timeSlot} </StyledButton>
 
-        </React.Fragment>)}
+        </React.Fragment>
+        )
+        }
 
         <Modal
           isOpen={showContactDetails}
@@ -46,13 +49,6 @@ const AppointmentTime = (appointmentTimeSlotProps : any )  => {
           ariaHideApp={false}
           style={modalStyles}
         >
-          {/*<ContactDetails*/}
-            {/*appointmentTime={selectedAppointment!== null ? selectedAppointment.timeSlot : ''} modalClosed={(status: boolean) => {*/}
-          {/*<ContactDetails appointmentTime={selectedAppointment!== null ? selectedAppointment.timeSlot : ''} modalClosed={(status: boolean) => {*/}
-
-          {/*//   console.log('handle Click, status', status ? 'YES': 'NO');*/}
-          {/*//   handleModalClick();*/}
-          {/*}}/>*/}
           <ContactDetailContainer/>
         </Modal>
 

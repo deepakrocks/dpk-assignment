@@ -28,24 +28,9 @@ export const SAVE_MODAL = 'SAVE_MODAL';
 export const SAVE_APPOINTMENT = 'SAVE_APPOINTMENT';
 export const SAVE_VALIDATION_ERROR = 'SAVE_VALIDATION_ERROR';
 
-// export interface AppointmentTimeState {
-//   type: string;
-//   time: any;
-// }
 
 
-export function setTime(time: string) {
-  return {
-    time,
-    type: SET_TIME,
-  };
-}
-export function setAvailableStatus(availableStatus: boolean) {
-  return {
-    availableStatus,
-    type: SET_AVAILABLE_STATUS,
-  };
-}
+
 export function setShowContactDetails(showContactDetails: boolean) {
   return {
     showContactDetails,
