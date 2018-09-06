@@ -1,3 +1,6 @@
+
+
+This application is written using React and Redux, on Typescript <br>
 Open Command line/ Terminal <br>
 Clone this repository <br>
 cd to the folder inside the cloned repository <br>
